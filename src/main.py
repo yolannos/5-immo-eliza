@@ -4,8 +4,10 @@ from utils import utils
 import pickle
 import streamlit as st 
 import webbrowser
+import os
 
-model = pickle.load(open("../src/bg_reg.pkl", "rb"))
+cwd = os.getcwd()  # Get the current working directory (cwd)
+mmodel = pickle.load(open(cwd+"/bg_reg.pkl", "rb"))
 
 ###### Just to get exactly the same columns as the one used in the model
 data = pd.read_csv("https://raw.githubusercontent.com/SamuelD005/challenge-regression/development/Data8.csv", sep=",")
