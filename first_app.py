@@ -76,7 +76,7 @@ def main():
 
     if st.button("Estimate the Price"):
         result= model.predict(df)
-        st.success(f'The output is {result[0]}')
+        st.success(f'The output is {np.expm1(result[0])}')
     if st.button("About"):
         st.text("Thanks for watching the presentation")
 
