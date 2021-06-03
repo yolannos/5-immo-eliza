@@ -1,3 +1,6 @@
+FROM python:3.7-stretch
+LABEL Yolann Sabaux <yolann.sabaux@gmail.com>
+
 # install build utilities
 RUN apt-get update && apt-get install -y gcc make apt-transport-https ca-certificates build-essential
 
