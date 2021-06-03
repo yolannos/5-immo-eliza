@@ -3,6 +3,7 @@ import pandas as pd
 from utils import utils
 import pickle
 import streamlit as st 
+import webbrowser
 
 model = pickle.load(open("bg_reg.pkl", "rb"))
 
@@ -14,7 +15,7 @@ columns = X.columns
 
 
 def main():
-    st.title("Belgium Real Estate Price Prediction")
+    st.title("Belgium Real Estate - Price prediction")
     html_temp = """
     <h2 style="color:black;text-align:left;"> Your favorite App to estimate the price of your good </h2>
     """
@@ -65,8 +66,13 @@ def main():
                         region]], 
                         columns= columns)
 
-
-    
+    with st.sidebar:
+        url = "https://github.com/yolannos/5-immo-eliza"
+        st.header('Hello there!')
+        st.subheader("Welcome to this brand new app")
+        st.write("If you want to have the code, just go on Github")
+        if st.button('Open Github'):
+            webbrowser.open_new_tab(url)
 
     if st.button("Estimate the Price"):
         result= model.predict(df)
