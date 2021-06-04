@@ -9,4 +9,4 @@ services:
         ports:
             - 8501:8501
         volumes:
-            - ./:/usr/src/
+            - ./src:/usr/src/5-IMMO-ELIZA

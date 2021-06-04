@@ -22,4 +22,4 @@ RUN ls -la /usr/src/*
 # Running Python Application
 EXPOSE 8501
 ENTRYPOINT ["streamlit","run"]
-CMD ["/usr/src/main.py"]
+CMD ["/usr/5-IMMO-ELIZA/main.py"]
