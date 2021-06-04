@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+    yolann_api:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        image: immo_elisa_api
+        port:
+            - 8501:8501
+        volumes:
+            ./src/
