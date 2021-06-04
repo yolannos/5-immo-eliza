@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy all the files from the project’s root to the working directory (Le point, je prends le src et le mets là où je suis)
 COPY src/ . 
-RUN ls -la /usr/*
+RUN ls -la /usr/src/*
 
 # Running Python Application
-CMD ["python3", "/usr/5-IMMO-ELIZA/main.py"]
+CMD ["python3", "/usr/src/5-IMMO-ELIZA/main.py"]
