@@ -7,7 +7,7 @@ import webbrowser
 import os
 
 cwd = os.getcwd()  # Get the current working directory (cwd)
-mmodel = pickle.load(open(cwd+"/bg_reg.pkl", "rb"))
+model = pickle.load(open(cwd+"/bg_reg.pkl", "rb"))
 
 ###### Just to get exactly the same columns as the one used in the model
 data = pd.read_csv("https://raw.githubusercontent.com/SamuelD005/challenge-regression/development/Data8.csv", sep=",")

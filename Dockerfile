@@ -20,4 +20,4 @@ COPY src/ .
 RUN ls -la /usr/src/*
 
 # Running Python Application
-CMD ["python3", "/usr/src/5-IMMO-ELIZA/main.py"]
+CMD ["streamlit run", "/usr/src/5-IMMO-ELIZA/main.py"]
