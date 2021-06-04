@@ -15,9 +15,9 @@ WORKDIR  /usr/src/5-IMMO-ELIZA
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy all the files from the project’s root to the working directory
-COPY src/ /src/
-RUN ls -la /src/*
+# Copy all the files from the project’s root to the working directory (Le point, je prends le src et le mets là où je suis)
+COPY src/ . 
+RUN ls -la /usr/*
 
 # Running Python Application
-CMD ["python3", "/src/main.py"]
+CMD ["python3", "/usr/5-IMMO-ELIZA/main.py"]
