@@ -6,7 +6,7 @@ services:
             context: ./
             dockerfile: Dockerfile
         image: immo_elisa_api
-        port:
+        ports:
             - 8501:8501
         volumes:
             ./src/
