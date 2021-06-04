@@ -20,4 +20,6 @@ COPY src/ .
 RUN ls -la /usr/src/*
 
 # Running Python Application
-CMD ["streamlit run", "/usr/src/5-IMMO-ELIZA/main.py"]
+EXPOSE 8501
+ENTRYPOINT ["streamlit","run"]
+CMD ["/usr/src/5-IMMO-ELIZA/main.py"]
