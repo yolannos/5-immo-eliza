@@ -19,6 +19,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src/ . 
 RUN ls -la /usr/src/*
 
+#Copy the config.toml for Streamlit
+COPY config.toml ~/.streamlit/
+#RUN ls -la ~/.streamlit/
+
 # Running Python Application
 EXPOSE 8501
 ENTRYPOINT ["streamlit","run","/usr/src/5-IMMO-ELIZA/main.py"]
