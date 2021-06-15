@@ -11,6 +11,15 @@ RUN pip3 --version
 # set the working directory for containers
 WORKDIR  /usr/src/5-IMMO-ELIZA
 
+# streamlit-specific commands
+#RUN mkdir -p /root/.streamlit
+#RUN bash -c 'echo -e "\
+#[server]\n\
+#enableCORS = false\n\
+#enableXsrfProtection = false\n\
+#enableWebsocketCompression = false\n\
+#" > /root/.streamlit/config.toml'
+
 # Installing python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
@@ -20,7 +29,7 @@ COPY src/ .
 RUN ls -la /usr/src/*
 
 #Copy the config.toml for Streamlit
-COPY config.toml ~/.streamlit/
+#COPY config.toml ~/.streamlit/
 #RUN ls -la ~/.streamlit/
 
 # Running Python Application
